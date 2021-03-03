@@ -1,47 +1,19 @@
-## Electron + TypeScript + React
-Boilerplate for a project using Electron, React and Typescript
+# DragonJS
 
-## Installation
+Uma IDE focada em JavaScript e seus frameworks, #DevToDev.
 
-Use a package manager of your choice (npm, yarn, etc.) in order to install all dependencies
+DragonJS tem a intenção de ser 100% gratuita, para que todos possam ter acesso, por se tratar de um projeto qualquer ajuda, crítica ou ideia são bem vindas <3
 
-```bash
-npm install
-```
+### Informações
 
-```bash
-yarn install
-```
+Versão: 1.0
 
-## Usage
-In order to run this project 2 scripts will need to be executed `dev:react` and `dev:electron`, run each one in a different terminal and always run `dev:react` before `dev:electron`, or `dev` to run them in order automatically
+Autor: [José Carlos Teles de Carvalho Neto](devjosécarlosteles@gmail.com)
 
-```bash
-npm run dev:react
-```
-```bash
-npm run dev:electron
-```
+Tecnologias: React, Electron, Typescript
 
-or
+### Agradecimentos
 
-```bash
-npm run dev
-```
+Diego Fernandes (rocketseat) ⇒ CTO na rocketseat diego desenvolveu um boilerplate para react e electron, mesmo boilerplate usado como base para este projeto 
 
-## Packaging
-To generate a project package run `package`
-
-```bash
-npm run package
-```
-
-
-
-## Contributing
-
-Pull requests are always welcome 😃.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+[diego3g - Overview](https://github.com/diego3g)
