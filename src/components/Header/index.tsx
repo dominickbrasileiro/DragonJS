@@ -1,10 +1,8 @@
 import React from 'react'
 import logo from '../../assets/images/logo.png'
-import { Container, Title, Icon, MenuRight, MenuLeft } from './style'
+import { Container, Title, Icon, MenuRight, MenuLeft, Menu } from './style'
 import details from '../../details.json'
-import { Menu } from './style'
 
-//Buttons menu
 import FileMenu from './Components/FileMenu'
 import Editor from './Components/EditorMenu'
 import ConfigMenu from './Components/ConfigMenu'
@@ -23,8 +21,7 @@ function Header () {
     return (
         <Container>
             <MenuLeft>
-                <Icon src={ logo } alt="logo" />
-                
+                <Icon src={ logo } alt="logo" />        
                 <Menu>
                     <FileMenu/>
                     <Editor/>

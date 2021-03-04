@@ -1,15 +1,19 @@
 import React, { ReactNode } from 'react'
+import { Container } from './style'
 
 interface BoxMenuProps {
-    children: ReactNode
+    children: ReactNode,
+    mouseLeave?: Function // expects to receive a function that will return the state to false by closing a box
 }
 
-function BoxMenu ({ children }: BoxMenuProps) {
+function BoxMenu ({ children, mouseLeave = () => null }: BoxMenuProps) {
     return (
         <>
-            <div>
+            <Container onMouseLeave={ () => {
+                mouseLeave()
+            } } >
                 { children }
-            </div>
+            </Container>
         </>   
     )
 }
