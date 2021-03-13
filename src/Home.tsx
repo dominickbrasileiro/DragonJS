@@ -7,7 +7,7 @@ function Home () {
         <DefaultPage>
             <Container>
                 <span>home</span>
-            </Container>
+             </Container>
         </DefaultPage>
     )
 }

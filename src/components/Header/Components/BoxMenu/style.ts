@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
+interface TagsProps {
+    leftPosition: number;   
+}
+
+const Container = styled.div.attrs(( props: TagsProps ) => {})<TagsProps>`
     position: absolute;
 
     top: 24px;
+    left: ${ props => props.leftPosition + 'px' };
 
     background-color: #444787;
 
