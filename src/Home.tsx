@@ -1,4 +1,5 @@
 import React from 'react'
+import ContainerHomeOptions from './components/ContainerHomeOptions'
 import DefaultPage from './components/DefaultPage'
 import { Container } from './styles/Home'
 
@@ -6,8 +7,8 @@ function Home () {
     return (
         <DefaultPage>
             <Container>
-                <span>home</span>
-             </Container>
+                <ContainerHomeOptions/>
+            </Container>
         </DefaultPage>
     )
 }

@@ -18,7 +18,7 @@ function Editor () {
 
             {
                 editorBox == true ? (
-                    <BoxMenu id='editor' left={ 48 } >
+                    <BoxMenu id='editor' mouseLeave={ () => setEditorBox(false) }  left={ 48 } >
                         <EditorMenuTheme/>  
                     </BoxMenu>
                 ) : null
