@@ -1,6 +1,6 @@
 import { FiMaximize2, FiMinus, FiX } from 'react-icons/fi'
 import styled from 'styled-components'
-import CustomAttributes from '../../@types/attributes'
+import CustomAttributes from '../../../../@types/attributes'
 
 const Container = styled.div`
     width: 100%;
@@ -37,7 +37,7 @@ const Menu = styled.div`
 const Title = styled.h1`
     position: relative;
 
-    left: -60px;
+    left: -80px;
 
     font-size: 8px;
 

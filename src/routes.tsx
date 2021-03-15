@@ -4,13 +4,13 @@ import {
     Switch,
     Route
 } from 'react-router-dom'
-import Home from './Home'
+import Menu from './screen/Menu'
 
 function Routes () {
     return (
         <Router>
             <Switch>
-                <Route path="/" component={ Home } exact />
+                <Route path="/" component={ Menu } exact />
             </Switch>
         </Router>
     )
