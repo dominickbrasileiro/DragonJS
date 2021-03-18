@@ -5,7 +5,7 @@ interface ContainerProps {
     space: number; // padding-right (px)
 }
 
-const Container = styled.div.attrs(( props: ContainerProps ) => {})<ContainerProps>`
+const Container = styled.section.attrs(( props: ContainerProps ) => {})<ContainerProps>`
     position: absolute;
 
     top: ${ props => props.top + 'px' };

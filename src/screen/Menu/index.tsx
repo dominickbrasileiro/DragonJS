@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import { remote } from 'electron'
 import {
     Container, LeftBar, TopBar
@@ -21,10 +21,12 @@ import {
     BiFolder,
     BiFolderOpen
 } from 'react-icons/Bi'
+import RightBar from './components/RightBar'
 
 function Menu () {
     const window = remote.getCurrentWindow()
     window.setSize(700, 500)
+    window.maximizable = false
 
     //menu actions 
     const handleMinimize = useCallback(() => {
@@ -43,12 +45,15 @@ function Menu () {
     
         window.close()
     }, [])
+
+    const [ show, setShow ] = useState('not')
+
     return (
         <Container>
             <TopBar>
                 <img src={ icon } alt="icon" />
 
-                <span>DragonJS</span>
+                <span>DragonJS[1.0]</span>
 
                 <MenuRight>
                     <ButtonContainer backgroundColor="rgba(200, 200, 200, 0.8)" >
@@ -66,27 +71,28 @@ function Menu () {
             </TopBar>
 
             <LeftBar>
-                <ButtonProject space={ 30 } top={ 20 }>
+                <ButtonProject onPress={ () => alert('hello wolrd') } space={ 30 } top={ 20 }>
                     <FiFile />
                     <span>Open File</span>
                 </ButtonProject>
 
-                <ButtonProject  space={ 31 } top={ 50 }>
+                <ButtonProject onPress={ () => setShow('file') } space={ 31 } top={ 50 }>
                     <FiFilePlus />
                     <span>New File</span>
                 </ButtonProject>
 
-                <ButtonProject space={ 20 } top={ 80 }>
+                <ButtonProject onPress={ () => alert('hello wolrd') } space={ 20 } top={ 80 }>
                     <BiFolder />
                     <span>New Project</span>
                 </ButtonProject>
 
-                <ButtonProject space={ 20 } top={ 110 }>
+                <ButtonProject onPress={ () => alert('hello wolrd') } space={ 20 } top={ 110 }>
                     <BiFolderOpen />
                     <span>Open Project</span>
                 </ButtonProject>
                 <RecentFiles/>
             </LeftBar>
+            <RightBar show={ show } />
         </Container>
     )
 }

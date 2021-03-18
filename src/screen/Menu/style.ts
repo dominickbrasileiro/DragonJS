@@ -42,7 +42,7 @@ const TopBar = styled.header`
     span {
         position: relative; 
 
-        left: 30px;
+        left: 50px;
     }
 `
 

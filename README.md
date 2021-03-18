@@ -14,7 +14,7 @@ Tecnologias: React, Electron, Typescript
 
 ### Objetivo
 
-Cansado de digitar centenas de linhas de código? com o DragonJS você pode simplesemente arrastá elementos pela tela livremente, além de criar elementos com alguns cliques, tudo isso sem perder a liberdade de um programador, podendo acessar o código fonte a qualquer momento, assim como grandes IDEs (Visual Studio, Delphi, Android Studio, ...).
+Cansado de digitar centenas de linhas de código? com o DragonJS você pode siplesmente arrastar elementos pela tela livremente, além de criar elementos com alguns cliques, tudo isso sem perder a liberdade de um programador, podendo acessar o código fonte a qualquer momento, assim como grandes IDEs (Visual Studio, Delphi, Android Studio, ...).
 
 ### Agradecimentos
 
