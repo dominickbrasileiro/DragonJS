@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import CustomAttributes from '../../../../@types/attributes'
 
 const Container = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 24px;
 
     display: flex;

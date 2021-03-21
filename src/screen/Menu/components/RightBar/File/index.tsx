@@ -5,21 +5,40 @@ import {
     Section
 } from './style'
 
-import { DiJavascript, DiHtml5, DiCss3, DiReact, DiGit } from 'react-icons/di'
-import { SiTypescript, SiJson, SiReact, SiVueDotJs, SiGit, SiMarkdown } from 'react-icons/si'
+import { 
+    DiJavascript, 
+    DiHtml5, 
+    DiCss3 
+} from 'react-icons/di'
+import { 
+    SiTypescript, 
+    SiJson, 
+    SiReact, 
+    SiVueDotJs, 
+    SiGit, 
+    SiMarkdown 
+} from 'react-icons/si'
 import Divisor from './components/Divisor'
+import { Link } from 'react-router-dom'
+import maximizeWindow from '../../../../tools/maiximizeWindow'
 
 function File() {
     return (
         <Container>
             <Divisor title="principal" lineSize={ 240 } />
             <Section>
+                <Link to="/editor">
+
                 <Box 
                     name='javascript' 
                     icon={ DiJavascript } 
                     color="#800080" 
                     textColor="#FFF" 
+                    onPress={() => {
+                        maximizeWindow()  
+                    }}
                 />
+                </Link>
 
                 <Box 
                     name='typescript' 
@@ -50,7 +69,7 @@ function File() {
                 />
             </Section>
 
-            <Divisor title="especifcs" lineSize={ 240 } />
+            <Divisor title="others" lineSize={ 240 } />
             <Section>
                 <Box
                     name='jsx'
