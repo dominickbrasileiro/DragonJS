@@ -21,7 +21,7 @@ import {
 import Divisor from './components/Divisor'
 import { Link } from 'react-router-dom'
 import maximizeWindow from '../../../../tools/maiximizeWindow'
-
+ 
 function File() {
     return (
         <Container>

@@ -27,6 +27,7 @@ function Menu () {
     const window = remote.getCurrentWindow()
     window.setSize(700, 500)
     window.maximizable = false
+    window.resizable = false
 
     //menu actions 
     const handleMinimize = useCallback(() => {
