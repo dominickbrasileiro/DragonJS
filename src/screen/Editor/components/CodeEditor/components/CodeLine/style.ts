@@ -1,37 +1,22 @@
-import styled  from 'styled-components';
+import styled from 'styled-components'
 
 const Container = styled.div`
+    width: 100%;
+
     display: flex;
 
-    align-items: center;
+    background-color: #121122;
 
-    width: 100%;
-    height: 16px;
-
-    font-size: 0.7rem;
-
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    font-size: 0.8rem;
 `
 
-const Code = styled.span`
-    
+const LineNumber = styled.div`
+    width: 10px;
+    height: 100%;
+
+    font-size: 0.8rem;
+
+    background-color: #191129;
 `
 
-const CursorText = styled.span`
-    border: 0.2px solid #fff;
-
-    animation: 0.5s 0.6s blink linear infinite;
-
-    @keyframes blink {
-        0% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-`
-
-export { Container, Code, CursorText }
+export { Container, LineNumber }

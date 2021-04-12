@@ -1,61 +1,37 @@
-import React, { useRef, useState } from 'react'
-import { 
-    Container, 
-    Code, 
-    CursorText 
-} from './style'
+import React from 'react'
+import { Container, LineNumber } from './style'
 
 interface CodeLineProps {
-    numberLine: number;
+    lineNumber: number;
 }
 
-function CodeLine ({ numberLine }: CodeLineProps) {
-    const code = useRef<HTMLSpanElement>(null)
+function CodeLine ({ lineNumber }: CodeLineProps) {
+    function firstSpanFocus() {
+        document.getElementById('firstspan'+lineNumber)?.focus()
+    }
 
-    const [ cursorTextState, setCursorTextState ] = useState(false)
-
-    function removeCursorText () {
-        function showOrNotShow(textContent: string) {
-            if(textContent = '') {
-                console.log('vai porra')
-                setCursorTextState(true)
-            } if (!textContent){
-                setCursorTextState(true)
-            } else {
-                console.log('salve')
-                setCursorTextState(false)
-            }
-
+    function createNewSpan(e: any) {
+        if(e.key === ' ') {
+            document.getElementById('firstspan'+lineNumber)?.blur()
+            const span = document.createElement('span')
+            span.setAttribute('contenteditable', 'true')
+            span.addEventListener('keypress', (e) => createNewSpan(e))
+            const element = document.getElementById('line'+lineNumber)
+            element?.appendChild(span)
+            span.focus()
         }
-
-        !code.current?.textContent ? null : showOrNotShow(code.current.textContent)
     }
-
-    function focusSpan() {
-        code.current?.focus()
-
-        code.current?.children.length === 0 ? setCursorTextState(true) : null
-    }
-
     return (
-        <Container  onClick={ () => focusSpan() }>
-            { numberLine }
-            <pre> 
-                <Code 
-                    contentEditable="true" 
-                    suppressContentEditableWarning
-                    ref={ code }
-                    onKeyUp={ () => removeCursorText() }
-                > 
-                    {
-                        cursorTextState === false ? (
-                            null
-                        ) : (
-                            <CursorText contentEditable="false" id="cursorText"></CursorText>
-                        )
-                    }
-                </Code>
-            </pre>
+        <Container onClick={() => firstSpanFocus()}>
+            <LineNumber>
+                { lineNumber }
+            </LineNumber>
+            <span id={'line'+lineNumber}><span 
+                id={'firstspan'+lineNumber}
+                contentEditable="true" 
+                suppressContentEditableWarning
+                onKeyPress={ (e) => createNewSpan(e) }
+            ></span></span>
         </Container>
     )
 }

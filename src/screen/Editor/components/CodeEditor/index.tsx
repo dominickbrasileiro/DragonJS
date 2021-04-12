@@ -5,7 +5,7 @@ import { Container } from './style'
 function CodeEditor() {
     return (
         <Container>
-            <CodeLine numberLine={ 1 }  />
+            <CodeLine lineNumber={ 1 }/>
         </Container>
     )
 }
