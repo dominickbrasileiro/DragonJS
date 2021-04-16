@@ -4,7 +4,7 @@ const ButtonMenu = styled.button`
     padding: 4px;
     border: 0;
 
-    background: #31274A;
+    background: #1B1B1B;
     color: #FFF;
 
     font-size: 10px;

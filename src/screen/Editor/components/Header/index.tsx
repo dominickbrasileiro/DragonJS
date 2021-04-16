@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react'
-import logo from '../../../../assets/images/logo.png'
+import logo from '../../../../assets/images/logo1.png'
+
 import { Container, Title, Icon, MenuRight, MenuLeft, Menu, ButtonContainer } from './style'
 import details from '../../../../details.json'
 

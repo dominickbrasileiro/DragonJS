@@ -59,7 +59,4 @@ const LeftBar = styled.div`
     background-color: #141414;
 `
 
-const ButtonProject = styled.div`
-`
-
 export { Container, TopBar, LeftBar }

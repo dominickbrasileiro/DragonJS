@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-    width: 50px;
+    width: 44px;
     height: 96.7vh;
 
     display: flex;
@@ -10,7 +10,7 @@ const Container = styled.div`
     
     align-items: center;
 
-    background-color: #31294A;
+    background-color: #1B1B1B;
 
     section {
         width: 100%;

@@ -11,7 +11,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     
-    background-color: #31274A;
+    background-color: #1B1B1B;
 
     -webkit-user-select: none;
     -webkit-app-region: drag;
@@ -22,8 +22,11 @@ const Container = styled.div`
 `
 
 const Icon = styled.img`
-    width: 24px;
+    width: 20px;
     height: 24px;
+    
+    margin-left: 4px;
+    margin-right: 10px;
 `
 
 const MenuLeft = styled.div`

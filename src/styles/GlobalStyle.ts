@@ -16,4 +16,12 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #191222;
     color: #E1E1E6;
   }
+
+  a{
+    text-decoration: none;
+  }
+
+  span {
+    caret-color:  transparent;
+  }
 `
