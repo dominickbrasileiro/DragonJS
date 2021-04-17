@@ -15,30 +15,29 @@ import {
     SiJson, 
     SiReact, 
     SiVueDotJs, 
-    SiGit, 
-    SiMarkdown 
+    SiMarkdown
 } from 'react-icons/si'
+import { FiFile } from 'react-icons/fi'
+
 import Divisor from './components/Divisor'
 import { Link } from 'react-router-dom'
 import maximizeWindow from '../../../../tools/maiximizeWindow'
+import createModal from '../../../../tools/createModal'
  
 function File() {
     return (
         <Container>
             <Divisor title="principal" lineSize={ 240 } />
             <Section>
-                <Link to="/editor">
-
                 <Box 
                     name='javascript' 
                     icon={ DiJavascript } 
                     color="#800080" 
                     textColor="#FFF" 
                     onPress={() => {
-                        maximizeWindow()  
+                        createModal()
                     }}
                 />
-                </Link>
 
                 <Box 
                     name='typescript' 
@@ -93,15 +92,15 @@ function File() {
                 />
 
                 <Box
-                    name='gitignore'
-                    icon={ SiGit }
+                    name='markdown'
+                    icon={ SiMarkdown }
                     color="#800080"
                     textColor='#FFF'
                 />
 
                 <Box
-                    name='markdown'
-                    icon={ SiMarkdown }
+                    name='other'
+                    icon={ FiFile }
                     color="#800080"
                     textColor='#FFF'
                 />
