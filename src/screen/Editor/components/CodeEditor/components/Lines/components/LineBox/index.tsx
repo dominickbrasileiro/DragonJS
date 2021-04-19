@@ -24,7 +24,7 @@ function LineBox() {
                     <>
                         { elements.itens.map(item => {
                             return (
-                                <Line key={ item }>
+                                <Line key={ item }> 
                                     <LineNumber>{ item }</LineNumber>
                                     <span onFocus={() => {
                                         setCursorState({show: true, left: 0})

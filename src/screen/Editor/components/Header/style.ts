@@ -37,10 +37,10 @@ const Menu = styled.div`
     display: flex;
 `
 
-const Title = styled.h1`
+const Title = styled.h1.attrs(( props: CustomAttributes ) => {})<CustomAttributes>`
     position: relative;
 
-    left: -80px;
+    left: ${ props => props.left || '-80px' }px;
 
     font-size: 8px;
 

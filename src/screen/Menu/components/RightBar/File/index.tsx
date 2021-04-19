@@ -35,7 +35,11 @@ function File() {
                     color="#800080" 
                     textColor="#FFF" 
                     onPress={() => {
-                        createModal()
+                        createModal({ 
+                            path: '/javascriptmodal' ,
+                            sizeX: 450,
+                            sizeY: 200
+                        })
                     }}
                 />
 

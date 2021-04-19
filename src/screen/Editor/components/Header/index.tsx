@@ -20,7 +20,12 @@ import {
     XIcon
 } from './style'
 
-function Header () {
+interface HeaderProps {
+    modal?: boolean;
+    title?: string;
+}
+
+function Header ({ modal, title }: HeaderProps) {
     const handleMinimize = useCallback(() => {
         const window = remote.getCurrentWindow()
 
@@ -59,19 +64,27 @@ function Header () {
 
     return (
         <Container>
-            <MenuLeft>
-                <Icon src={ logo } alt="logo" />        
-                <Menu>
-                    <FileMenu/>
-                    <Editor/>
-                    <PlaygroundMenu/>
-                    <TerminalMenu/>
-                    <ConfigMenu/>
-                    <HelpMenu/>
-                </Menu>
-            </MenuLeft>
+            {
+                !modal ? (
+                    <MenuLeft>
+                        <Icon src={ logo } alt="logo" />        
+                        <Menu>
+                        <FileMenu/>
+                        <Editor/>
+                        <PlaygroundMenu/>
+                        <TerminalMenu/>
+                        <ConfigMenu/>
+                        <HelpMenu/>
+                    </Menu>
+                    </MenuLeft>
+                ) : null
+            }
 
-            <Title>DragonJS[{details.version}]</Title>
+            {
+                !title ? (
+                    <Title>DragonJS[{details.version}]</Title>
+                ) : (<Title left={ 150 }>{ title }</Title>)
+            }
 
             <MenuRight>
                 <ButtonContainer backgroundColor="rgba(255, 255, 255, 0.2)" >

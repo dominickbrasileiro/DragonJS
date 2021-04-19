@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom'
 import Menu from './screen/Menu'
 import Editor from './screen/Editor'
+// modals
+import JavascriptModal from './screen/Menu/components/RightBar/File/Modal/JavascriptModal'
 
 function Routes () {
     return (
@@ -13,6 +15,8 @@ function Routes () {
             <Switch>
                 <Route path="/" component={ Menu } exact />
                 <Route path="/editor" component={ Editor } />
+                {/* modals */}
+                <Route path="/javascriptmodal" component={ JavascriptModal } />
             </Switch>
         </Router>
     )
