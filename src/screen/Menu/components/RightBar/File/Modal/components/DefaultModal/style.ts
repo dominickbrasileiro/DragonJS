@@ -17,6 +17,20 @@ export const Container = styled.div`
         display: flex;
 
         align-items: center;
+
+        button { 
+            position: relative;
+
+            left: 260px;
+
+            padding: 4px;
+
+            border: 0;
+            border-radius: 2px;
+            
+            color: #FFF;
+            background-color: #1F1F1F;
+        }
     }
 `
 

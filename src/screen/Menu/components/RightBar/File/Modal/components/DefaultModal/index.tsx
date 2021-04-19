@@ -1,6 +1,6 @@
-import { remote } from 'electron'
 import React, { ReactNode } from 'react' 
 import Header from '../../../../../../../Editor/components/Header'
+import createFile from '../../../../../../../tools/createFile'
 import {
     Container, ContainerOptions
 } from './style'
@@ -8,9 +8,10 @@ import {
 interface DefaultModalProps {
     title: string;
     children: ReactNode;
+    extension: string;
 }
 
-function DefaultModal ({ title, children }: DefaultModalProps) {
+function DefaultModal ({ title, children, extension }: DefaultModalProps) {
     return (
         <Container>
             <Header title={ title } modal />
@@ -39,7 +40,23 @@ function DefaultModal ({ title, children }: DefaultModalProps) {
             </ContainerOptions>
             <section>
                 <input type="radio" />
-                <span>init wich hello world</span>
+                <span>&nbsp;init with hello world</span>
+                {/* const element = document.getElementsByTagName('input')
+                                const path = () => !element[1].files ? null : element[1].files[0].path
+                                console.log(path()) */}
+                <button onClick={() => {
+                    const element = document.getElementsByTagName('input')
+
+                    // file name
+                    const fileName = element[0].value
+
+                    // directory URL or Path
+                    const path = () => !element[1].files ? '/' : element[1].files[0].path
+                    const init = path().lastIndexOf('\\')
+                    const exactPath = path().substring(0, init)
+
+                    createFile({ filename: fileName, path: exactPath, extension: extension })
+                }} >create</button>
             </section>
         </Container>
     )

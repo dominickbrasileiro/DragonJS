@@ -3,7 +3,7 @@ import DefaultModal from '../components/DefaultModal'
 
 function JavascriptModal() {
     return (
-        <DefaultModal title="CREATE JAVASCRIPT FILE">
+        <DefaultModal extension="js" title="CREATE JAVASCRIPT FILE">
         </DefaultModal>
     )
 }
