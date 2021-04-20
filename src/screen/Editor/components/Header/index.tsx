@@ -83,7 +83,7 @@ function Header ({ modal, title }: HeaderProps) {
             {
                 !title ? (
                     <Title>DragonJS[{details.version}]</Title>
-                ) : (<Title left={ 150 }>{ title }</Title>)
+                ) : (<Title left={ 170 }>{ title }</Title>)
             }
 
             <MenuRight>

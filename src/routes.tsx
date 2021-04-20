@@ -8,6 +8,9 @@ import Menu from './screen/Menu'
 import Editor from './screen/Editor'
 // modals
 import JavascriptModal from './screen/Menu/components/RightBar/File/Modal/JavascriptModal'
+import TypescriptModal from './screen/Menu/components/RightBar/File/Modal/TypescriptModal'
+import HtmlModal from './screen/Menu/components/RightBar/File/Modal/HtmlModal'
+import CssModal from './screen/Menu/components/RightBar/File/Modal/CssModal'
 
 function Routes () {
     return (
@@ -17,6 +20,9 @@ function Routes () {
                 <Route path="/editor" component={ Editor } />
                 {/* modals */}
                 <Route path="/javascriptmodal" component={ JavascriptModal } />
+                <Route path="/typescriptmodal" component={ TypescriptModal } />
+                <Route path="/htmlmodal" component={ HtmlModal } />
+                <Route path="/cssmodal" component={ CssModal } />
             </Switch>
         </Router>
     )

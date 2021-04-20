@@ -4,7 +4,9 @@ export default function extensionForLangName(extension: string) {
         ['ts', 'typescript'],
         ['jsx', 'react'],
         ['tsx', 'react-typescript'],
-        ['json', 'JSON']
+        ['json', 'JSON'],
+        ['html', 'HTML'],
+        ['css', 'CSS']
     ]
 
     let language

@@ -1,37 +1,36 @@
 import React, { ReactNode } from 'react' 
-import Header from '../../../../../../../Editor/components/Header'
-import createFile from '../../../../../../../tools/createFile'
+import Header from '../../../../../../Editor/components/Header'
+import createFile from '../../../../../../tools/createFile'
+import extensionForLangName from '../../../../../../tools/extensionForLangName'
 import {
     Container, ContainerOptions
 } from './style'
 
 interface DefaultModalProps {
     title: string;
-    children: ReactNode;
     extension: string;
 }
 
-function DefaultModal ({ title, children, extension }: DefaultModalProps) {
+function DefaultModal ({ title, extension }: DefaultModalProps) {
     return (
         <Container>
             <Header title={ title } modal />
-            { children }
 
             <ContainerOptions>
                 <table>
                     <tbody>
                         <tr>
                             <td>type</td>
-                            <td>javascript</td>
+                            <td>{ extensionForLangName(extension) }</td>
                         </tr>
                         <tr>
                             <td>name</td>
-                            <td><input placeholder="file name" />.js</td>
+                            <td><input placeholder="file name" />.{extension}</td>
                         </tr>
                         <tr>
                             <td>destiny</td>
                             <td id="selectDirectoryContainer">
-                                <label htmlFor="selectDirectory">selecionar um arquivo &#187;</label>
+                                <label htmlFor="selectDirectory">selecionar uma pasta &#187;</label>
                                 <input id='selectDirectory' directory="" webkitdirectory="" type="file" />
                             </td> 
                         </tr>
@@ -41,9 +40,6 @@ function DefaultModal ({ title, children, extension }: DefaultModalProps) {
             <section>
                 <input type="radio" />
                 <span>&nbsp;init with hello world</span>
-                {/* const element = document.getElementsByTagName('input')
-                                const path = () => !element[1].files ? null : element[1].files[0].path
-                                console.log(path()) */}
                 <button onClick={() => {
                     const element = document.getElementsByTagName('input')
 

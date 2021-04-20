@@ -48,6 +48,13 @@ function File() {
                     icon={ SiTypescript } 
                     color="#800080" 
                     textColor="#FFF" 
+                    onPress={() => {
+                        createModal({
+                            path: '/typescriptmodal',
+                            sizeX: 450,
+                            sizeY: 200
+                        })
+                    }}
                 />
 
                 <Box 
@@ -55,6 +62,13 @@ function File() {
                     icon={ DiHtml5 } 
                     color="#800080" 
                     textColor="#FFF" 
+                    onPress={() => {
+                        createModal({
+                            path: '/htmlmodal',
+                            sizeX: 450,
+                            sizeY: 200
+                        })
+                    }}
                 />
 
                 <Box 
@@ -62,6 +76,13 @@ function File() {
                     icon={ DiCss3 } 
                     color="#800080" 
                     textColor="#FFF" 
+                    onPress={() => {
+                        createModal({
+                            path: '/cssmodal',
+                            sizeX: 450,
+                            sizeY: 200
+                        })
+                    }}
                 />
 
                 <Box 
