@@ -20,7 +20,7 @@ import {
 import {
     BiFolder,
     BiFolderOpen
-} from 'react-icons/Bi'
+} from 'react-icons/bi'
 import RightBar from './components/RightBar'
 
 function Menu () {
